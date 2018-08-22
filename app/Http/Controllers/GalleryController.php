@@ -24,7 +24,12 @@ class GalleryController extends Controller
     public function index(Request $request){
 
         if($request->isMethod('post')) {
-           $this->g_rep->addImage($request);
+           $result = $this->g_rep->addImage($request);
+            if(is_array($result) && !empty($result['error'])){
+                return back()->with($result);
+            }
+
+            return redirect()->route('gallery')->with($result);
         }
 
         if(view()->exists('gallery')){

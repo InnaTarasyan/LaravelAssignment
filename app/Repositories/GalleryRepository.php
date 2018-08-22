@@ -23,6 +23,10 @@ class GalleryRepository extends Repository
             }
         }
 
-        Gallery::create($data);
+        $gallery = Gallery::create($data);
+        if ($gallery->exists){
+            return ['status' => 'Изображение Добавлено!'];
+        }
+        return ['status' => 'error'];
     }
 }
