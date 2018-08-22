@@ -33,3 +33,21 @@ After you have cloned or downloaded the project, navigate to the corresponding d
    </ul>
 
 
+## Pages
+## Main Page 
+![ScreenShot](https://imgur.com/zJFc750)
+ <br/> 
+
+## News Page 
+![ScreenShot](https://imgur.com/Q0R6O2v)
+<br/> 
+![ScreenShot](https://imgur.com/yrm4GGp)
+<br/>
+![ScreenShot](https://imgur.com/3aVRQQL)
+<br/>
+
+
+## Gallery Page
+![ScreenShot](https://imgur.com/xVLrWlk)
+<br/> 
+![ScreenShot](https://imgur.com/Pbuj7yO)
