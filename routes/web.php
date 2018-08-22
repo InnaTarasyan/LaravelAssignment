@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get( '/', 'HomeController@index');
+Route::post('store', ['uses' => 'HomeController@store', 'as' => 'store']);
+Route::put('update', ['uses' => 'HomeController@update', 'as' => 'update']);
+
 
 Route::resource('news', 'NewsController');
 Route::match(['get', 'post'], 'gallery', ['uses' => 'GalleryController@index', 'as' => 'gallery']);

@@ -10,20 +10,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Новости</div>
-                    @if (count($errors) > 0)
-                        <div class="box error-box alert">
-                            @foreach ($errors->all() as $error)
-                                <p>{{ $error }}</p>
-                            @endforeach
-                        </div>
-                    @endif
 
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
 
                         <div class="w3-container">
                             <h2>Новости</h2>

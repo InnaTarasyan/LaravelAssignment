@@ -26,7 +26,7 @@ class NewsRepository extends Repository
         }
 
         $this->model->fill($data);
-        $news = News::create($data);
+        $news = $this->model->create($data);
         if ($news->exists){
             return ['status' => 'Приложение Добавлено!'];
         }

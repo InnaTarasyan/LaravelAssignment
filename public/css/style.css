@@ -25,7 +25,7 @@ input[type=submit]:hover {
 
 .alert {
     padding: 20px;
-    color: #f44336;
+    /*color: #f44336;*/
 }
 
 .content .contact-form li.text-field input, .content .contact-form li.checkbox-field input, .content .contact-form li.file-field input, .content .contact-form li select, .content .contact-form li textarea { margin-top:10px; padding:10px; }

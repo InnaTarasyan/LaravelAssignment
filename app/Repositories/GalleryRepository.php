@@ -23,7 +23,7 @@ class GalleryRepository extends Repository
             }
         }
 
-        $gallery = Gallery::create($data);
+        $gallery = $this->model->create($data);
         if ($gallery->exists){
             return ['status' => 'Изображение Добавлено!'];
         }

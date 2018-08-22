@@ -8,13 +8,6 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header"> {{ isset($news->title) ? 'Редактировать Новость' : 'Добавить Новость'  }}</div>
-                    @if (count($errors) > 0)
-                        <div class="box error-box alert">
-                            @foreach ($errors->all() as $error)
-                                <p>{{ $error }}</p>
-                            @endforeach
-                        </div>
-                    @endif
 
                     <div class="card-body">
                         {!! Form::open([ 'url' => (isset($news->id)) ? route('news.update', ['id'=>$news->id]) : route('news.store') ,'class'=>'contact-form','method'=>'POST','enctype'=>'multipart/form-data']) !!}

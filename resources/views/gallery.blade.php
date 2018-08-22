@@ -5,18 +5,7 @@
 @endsection
 @section('content')
     <div class="container" style="padding-top: 2%">
-        @if (count($errors) > 0)
-            <div class="box error-box alert">
-                @foreach ($errors->all() as $error)
-                    <p>{{ $error }}</p>
-                @endforeach
-            </div>
-        @endif
-        @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
+
         <div>
             {!! Form::open([ 'url' => route('gallery'), 'class'=>'contact-form','method'=>'POST','enctype'=>'multipart/form-data']) !!}
             {{ csrf_field() }}
