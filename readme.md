@@ -35,19 +35,19 @@ After you have cloned or downloaded the project, navigate to the corresponding d
 
 ## Pages
 ## Main Page 
-![ScreenShot](https://imgur.com/zJFc750)
+![ScreenShot](https://imgur.com/zJFc750.png)
  <br/> 
 
 ## News Page 
-![ScreenShot](https://imgur.com/Q0R6O2v)
+![ScreenShot](https://imgur.com/Q0R6O2v.png)
 <br/> 
-![ScreenShot](https://imgur.com/yrm4GGp)
+![ScreenShot](https://imgur.com/yrm4GGp.png)
 <br/>
-![ScreenShot](https://imgur.com/3aVRQQL)
+![ScreenShot](https://imgur.com/3aVRQQL.png)
 <br/>
 
 
 ## Gallery Page
-![ScreenShot](https://imgur.com/xVLrWlk)
+![ScreenShot](https://imgur.com/xVLrWlk.png)
 <br/> 
-![ScreenShot](https://imgur.com/Pbuj7yO)
+![ScreenShot](https://imgur.com/Pbuj7yO.png)
