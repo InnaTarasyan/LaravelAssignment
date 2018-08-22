@@ -4,16 +4,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 @endsection
 @section('content')
-    <div class="container">
+    <div class="container" style="padding-top: 2%">
+        <div>
+            {!! Form::open([ 'url' => route('gallery'), 'class'=>'contact-form','method'=>'POST','enctype'=>'multipart/form-data']) !!}
+            {{ csrf_field() }}
+            {!! Form::file('img', ['class' => 'filestyle','data-buttonText'=>'Выбрать Изображение','data-buttonName'=>"btn-primary",'data-placeholder'=>"Выбрать Изображение"]) !!}
+            {!! Form::button('Загрузить изображение', ['class' => 'btn btn-success','type'=>'submit']) !!}
+            {!! Form::close() !!}
+        </div>
         <div class="row">
             <div class="row">
                 @foreach($images as $image)
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                         <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                           data-image="{{ asset('images/news/'.$image->main_image) }}"
+                           data-image="{{ asset('images/gallery/'.$image->main_image) }}"
                            data-target="#image-gallery">
                             <img class="img-thumbnail"
-                                 src="{{ asset('images/news/'.$image->main_image) }}"
+                                 src="{{ asset('images/gallery/'.$image->main_image) }}"
                                  alt="{{ $image->description }}">
                         </a>
                     </div>
@@ -47,4 +54,5 @@
 @endsection
 @section('js')
     <script src="{{ asset('js/gallery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-filestyle.min.js') }}"></script>
 @endsection
