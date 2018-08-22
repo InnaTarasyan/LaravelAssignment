@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index');
 
 Route::resource('news', 'NewsController');
 Route::match(['get', 'post'], 'gallery', ['uses' => 'GalleryController@index', 'as' => 'gallery']);

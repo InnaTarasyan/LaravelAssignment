@@ -2,36 +2,42 @@
 
 namespace App\Http\Controllers;
 
-use App\Image as Gallery;
+
+use App\Repositories\GalleryRepository;
 use Illuminate\Http\Request;
-use Image;
 
 class GalleryController extends Controller
 {
+    protected $g_rep;
+
+    public function __construct(GalleryRepository $g_rep)
+    {
+        $this->g_rep = $g_rep;
+    }
+
+    /**
+     * Adds a new image, if the request method is POST, after that returns images.
+     *
+     * @param  Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function index(Request $request){
 
         if($request->isMethod('post')) {
-            $data = $request->except('_token');
-
-            if ($request->hasFile('img')) {
-                $image = $request->file('img');
-                if ($image->isValid()) {
-                    $img = Image::make($image);
-                    $data['main_image'] = str_random(8).'.jpg';
-                    $img->save(public_path().'/'.'/images/gallery/'.$data['main_image']);
-                }
-            }
-
-           Gallery::create($data);
+           $this->g_rep->addImage($request);
         }
 
         if(view()->exists('gallery')){
-            $images = Gallery::select('main_image', 'description')->get();
+            $images = $this->getImages();
             return view('gallery')
                 ->with(['images' => $images]);
         }
         abort(404);
 
 
+    }
+
+    public function getImages(){
+        return $this->g_rep->get(['main_image', 'description']);
     }
 }
